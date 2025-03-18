@@ -15,5 +15,15 @@ if (process.env.NODE_ENV === 'production') {
     });
 }
 
+app.put('/api/user/:id', async (req, res) => {
+    try {
+        const user = await User.findByIdAndUpdate(req.params.id, req.body, { new: true });
+        res.json(user);
+    } catch (err) {
+        res.status(500).json({ error: 'Error updating user data' });
+    }
+});
+
+
 app.get('/', (req, res) => res.send('Hello,World!'));
 app.listen(port, () => console.log(`App listening on port ${port}`));

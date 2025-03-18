@@ -1,56 +1,89 @@
-
-.layout{
-    height:100vh;
-    padding:20px 50px;
+/* Layout */
+.layout {
+    height: 100vh;
+    padding: 20px 50px;
+    background-color: #F4F7FE; /* Light Blue-Gray */
 }
-.header{
-    height:10%;
-    background-color: blue !important;
-    opacity:0.8;
+
+/* Header */
+.header {
+    height: 10%;
+    background: linear-gradient(135deg, #89CFF0, #5AA9E6); /* Soft Baby Blue Gradient */
+    opacity: 0.95;
     text-align: center;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding:5px;
-    border:1px solid;
-    border-radius:5px;
-    margin-bottom:6px;
-}
-.header h1{
-    color: white;
-    font-size:22px;
-    margin-left: 5px !important;
-}
-.header button{
-    background-color: white !important;
-    border:1px solid white !important;
-    font-size: 15px;
-    color: blue !important;
-    margin-right: 5px;
-}
-.content{
-    height:90%;
-    border:1px solid black;
+    padding: 12px 20px;
     border-radius: 10px;
-    box-shadow: 0 0 3px blue;
-    padding: 10px;
+    margin-bottom: 12px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
 }
-a{
+
+/* Header Title */
+.header h1 {
+    color: #FFFFFF;
+    font-size: 26px;
+    font-weight: bold;
+    margin: 0;
+    letter-spacing: 1px;
+}
+
+/* Header Button */
+.header button {
+    background-color: #FFFFFF !important;
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+    color: #0057A8 !important;
+    padding: 10px 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Button Hover */
+.header button:hover {
+    background-color: #E6F2FF !important;
+    color: #003F7F !important;
+    box-shadow: 0px 3px 8px rgba(0, 87, 255, 0.3);
+}
+
+/* Content */
+.content {
+    height: 90%;
+    border: 2px solid #5AA9E6;
+    border-radius: 12px;
+    box-shadow: 0px 5px 15px rgba(90, 169, 230, 0.3);
+    padding: 20px;
+    background-color: #FFFFFF;
+}
+
+/* Links */
+a {
     text-decoration: none;
+    color: #0057A8;
+    font-weight: 600;
+    transition: color 0.3s ease-in-out;
 }
 
-@media screen and (max-width:700px){
-    .header h1{
-        color: white;
-        font-size:14px;
-        margin-left: 5px !important;
-    }
-    .header button{
-        background-color: white !important;
-        border:1px solid white !important;
-        font-size: 9px;
-        color: blue !important;
-        margin-right: 5px;
-    }
+a:hover {
+    color: #003F7F;
+    text-decoration: underline;
 }
 
+/* Responsive Design */
+@media screen and (max-width: 700px) {
+    .header h1 {
+        font-size: 18px;
+    }
+
+    .header button {
+        font-size: 14px;
+        padding: 8px 14px;
+    }
+
+    .layout {
+        padding: 15px;
+    }
+}

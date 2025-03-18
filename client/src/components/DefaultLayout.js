@@ -39,7 +39,7 @@ function DefaultLayout(props) {
     return (
         <div className='layout'>
             <div className='header'>
-                <h1 onClick={() => navigate('/home')} style={{ cursor: 'pointer' }}>Apurv's Resume Building Website</h1>
+                <h1 onClick={() => navigate('/home')} style={{ cursor: 'pointer' }}> Resume Builder Website</h1>
                 <Dropdown
                     menu={{
                         items,

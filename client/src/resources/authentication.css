@@ -1,35 +1,104 @@
-.auth-parent{
-    height:100vh;
-    display:flex;
-    align-items: center;
+/* Full-page background */
+.auth-container {
+    display: flex;
     justify-content: center;
-    background-image: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
-    position:absolute;
-    width:100%;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    background: linear-gradient(135deg, #F4F7FE, #E6ECFC);
+    font-family: 'Poppins', sans-serif;
 }
-.auth-parent h1{
-    font-size:22px;
-    font-weight:bold;
-}
-.auth-parent form{
-    width:400px;
-    box-shadow: 0 0 2px gray;
-    padding:20px;
-}
-.brand{
-    font-size: 20px !important ;
-    /* background-color: blue; */
-    /* opacity:0.8; */
-    color:black;
-    padding:5px;
+
+/* Login & Register Card */
+.auth-card {
+    width: 100%;
+    max-width: 400px;
+    padding: 35px;
+    background: #FFFFFF;
+    border-radius: 12px;
+    box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.15);
     text-align: center;
-    border:1px solid black;
-    border-radius: 5px;
+    color: #333333;
+    transition: transform 0.3s ease-in-out;
 }
-@media screen and (max-width:700px){
-    .auth-parent form{
-        width:300px;
-        box-shadow: 0 0 2px gray;
-        padding:20px;
+
+/* Title */
+.brand {
+    font-size: 28px;
+    font-weight: 700;
+    color: #002AFF;
+    margin-bottom: 20px;
+}
+
+/* Form Fields */
+.ant-form-item-label label {
+    color: #333333;
+    font-weight: 600;
+}
+
+.ant-input, .ant-input-password {
+    border-radius: 10px;
+    padding: 14px;
+    border: 1px solid #d1d5db;
+    font-size: 16px;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Focus effect */
+.ant-input:focus, .ant-input-password:focus {
+    border: 2px solid #0057FF !important;
+    box-shadow: 0px 0px 10px rgba(0, 87, 255, 0.3);
+}
+
+/* Button Container */
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+/* Register Button */
+.login-btn {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 12px;
+    background: #002AFF;
+    color: white;
+    border: none;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-btn:hover {
+    background: #0057FF;
+    box-shadow: 0px 5px 15px rgba(0, 42, 255, 0.4);
+}
+
+/* Register Link */
+.register-link {
+    color: #002AFF;
+    text-decoration: none;
+    font-weight: 600;
+    display: block;
+    margin-top: 10px;
+}
+
+.register-link:hover {
+    text-decoration: underline;
+    color: #0057FF;
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+    .auth-card {
+        max-width: 90%;
+        padding: 25px;
     }
 }
